@@ -1,11 +1,6 @@
 public class BubbleSortDemo {
     
-    /**
-     * 基本氣泡排序實作
-     * 時間複雜度：最佳 O(n)，最壞 O(n²)，平均 O(n²)
-     * 空間複雜度：O(1)
-     * 穩定性：穩定排序
-     */
+    
     static void bubbleSort(int[] array) {
         int n = array.length;
         int totalComparisons = 0;
@@ -115,3 +110,18 @@ public class BubbleSortDemo {
     }
 }
 
+/*
+ * 傳統氣泡排序 Time Complexity: O(n^2)
+ * 說明：
+ * 1. 單向排序：每輪從左向右，將最大值「浮」到右邊。
+ * 2. 最壞情況下進行 n(n-1)/2 次比較與交換 → O(n^2)。
+ * 3. 最佳情況（已排序）僅需一輪檢查 → O(n)。
+ */
+
+/*
+ * 雞尾酒排序 Time Complexity: O(n^2)
+ * 說明：
+ * 1. 雙向排序：每輪包含從左向右（→）與從右向左（←）兩次比較。
+ * 2. 同時將最大值往右、小值往左推，有機會提早結束。
+ * 3. 最佳情況為 O(n)，但平均與最壞仍為 O(n^2)。
+ */
